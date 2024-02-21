@@ -10,8 +10,13 @@
             font-size: 14px;
             background-color: #f0f0f0;
         }
-        h1, h2 {
-            font-size: 16px;
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2 {
+            font-size: 14px;
             font-weight: bold;
             text-align: center;
         }
@@ -31,9 +36,8 @@
 </head>
 <body>
  <div class="container">
-  <p id="question"></p>
-  <p id="title"></p>
-  <p id="parrafo2"></p>
+  <h1 id="parrafo1"></h1>
+  <h2 id="parrafo2"></h2>
   <img src="https://d1.awsstatic.com/Route53/how-route-53-routes-traffic.8d313c7da075c3c7303aaef32e89b5d0b7885e7c.png" alt="DNS">
   <p id="parrafo3"></p>
   <img src="https://academiesciencesmoralesetpolitiques.fr/wp-content/uploads/2018/10/stock-internet.jpg" alt="Internet">
@@ -43,9 +47,8 @@
  </div>
 
 <script>
-    var question =
-"UXXigJllc3QtY2UgcXXigJl1biBETlMgZXQgw6AgcXVvaSBzZXJ0LWlsID8"=;
-    var title = "RE5TIHNpZ25pZmllIFN5c3TDqG1lIGRlIE5vbXMgZGUgRG9tYWluZSwgdW5lIHRlY2hub2xvZ2llIHF1aSBwZXJtZXQgZOKAmWFzc29jaWVyIGxlcyBub21zIGRlcyBzaXRlcyB3ZWIgw6AgbGV1cnMgYWRyZXNzZXMgbnVtw6lyaXF1ZXMgc3VyIEludGVybmV0LCBhcHBlbMOpZXMgYWRyZXNzZXMgSVAlMkIu";
+    var question = "UXXigJllc3QtY2UgcXXigJl1biBETlMgZXQgw6AgcXVvaSBzZXJ0LWlsID8";
+    var title = "RE5TIHNpZ25pZmllIFN5c3TDqG1lIGRlIE5vbXMgZGUgRG9tYWluZSwgdW5lIHRlY2hub2xvZ2llIHF1aSBwZXJtZXQgZOKAmWFzc29jaWVyIGxlcyBub21zIGRlcyBzaXRlcyB3ZWIgw6AgbGV1cnMgYWRyZXNzZXMgbnVtw6lyaXF1ZXMgc3VyIEludGVybmV0LCBhcHBlbMOpZXMgYWRyZXNzZXMgSVAu";
     var cadena2 = "UXVhbmQgdm91cyB0YXBleiBsZSBub20gZOKAmXVuIHNpdGUgd2ViIGRhbnMgdm90cmUgbmF2aWdhdGV1ciwgcGFyIGV4ZW1wbGUgd3d3Lmdvb2dsZS5jb20sIGxlIEROUyBzZSBjaGFyZ2UgZGUgY2hlcmNoZXIgbOKAmWFkcmVzc2UgSVAgY29ycmVzcG9uZGFudGUsIHF1aSBlc3QgdW4gbm9tYnJlIGNvbW1lIDE0Mi4yNTAuMTg0LjE5NiwgZXQgZGUgY29ubmVjdGVyIHZvdHJlIG9yZGluYXRldXIgYXUgc2VydmV1ciBvw7kgc2UgdHJvdXZlIGxlIHNpdGUgd2ViLg==";
     var cadena3 = "QWluc2ksIGxlIEROUyBmYWNpbGl0ZSBsYSBuYXZpZ2F0aW9uIHN1ciBJbnRlcm5ldCwgY2FyIHZvdXMgbuKAmWF2ZXogcGFzIMOgIG3DqW1vcmlzZXIgZGVzIG5vbWJyZXMgY29tcGxpcXXDqXMgcG91ciBhY2PDqWRlciBhdXggc2l0ZXMgd2ViIHF1aSB2b3VzIGludMOpcmVzc2VudC4gRGUgcGx1cywgbGUgRE5TIHBlcm1ldCBxdWUgbGVzIHNpdGVzIHdlYiBwdWlzc2VudCBjaGFuZ2VyIGTigJlhZHJlc3NlIElQIHNhbnMgYWZmZWN0ZXIgbGVzIHV0aWxpc2F0ZXVycywgY2FyIGxlIEROUyBzZSBtZXQgw6Agam91ciBhdXRvbWF0aXF1ZW1lbnQu";
     var cadena4 = "TGUgRE5TIGZvbmN0aW9ubmUgZ3LDomNlIMOgIHVuIHLDqXNlYXUgZGUgc2VydmV1cnMgcsOpcGFydGlzIGRhbnMgbGUgbW9uZGUgZW50aWVyLCBxdWkgc3RvY2tlbnQgZXQgcGFydGFnZW50IGxlcyBpbmZvcm1hdGlvbnMgc3VyIGxlcyBub21zIGRlIGRvbWFpbmUgZXQgbGV1cnMgYWRyZXNzZXMgSVAuIFF1YW5kIHZvdXMgZmFpdGVzIHVuZSByZXF1w6p0ZSBhdSBETlMsIHZvdHJlIG9yZGluYXRldXIgY29tbXVuaXF1ZSBhdmVjIGxlIHNlcnZldXIgRE5TIGxlIHBsdXMgcHJvY2hlLCBxdWkgcGV1dCByw6lzb3VkcmUgdm90cmUgcmVxdcOqdGUgb3UgbGEgcmVkaXJpZ2VyIHZlcnMgdW4gYXV0cmUgc2VydmV1ciBETlMganVzcXXigJnDoCB0cm91dmVyIGxhIHLDqXBvbnNlLg==";
@@ -64,12 +67,12 @@
     function showText(text, element) {
       document.getElementById(element).innerHTML = decodeText(text);
     }
-    showText(cadena0, "question");
-    showText(cadena1, "title");
-    showText(cadena2, "parrafo2");
-    showText(cadena3, "parrafo3");
-    showText(cadena4, "parrafo4");
-    showText(cadena5, "parrafo5");
+    showText(question, "parrafo1"); // Cambié el segundo argumento a parrafo1
+    showText(title, "parrafo2"); // Cambié el segundo argumento a parrafo2
+    showText(cadena2, "parrafo3"); // Cambié el segundo argumento a parrafo3
+    showText(cadena3, "parrafo4"); // Cambié el segundo argumento a parrafo4
+    showText(cadena4, "parrafo5"); // Cambié el segundo argumento a parrafo5
+    showText(cadena5, "parrafo6"); // Añadí esta línea para mostrar el último párrafo
   </script>
 </body>
 </html>
